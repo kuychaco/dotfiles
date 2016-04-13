@@ -1,127 +1,49 @@
 "*":
   "atom-beautify":
-    html_preserve_newlines: false
-    js_preserve_newlines: false
-    js_space_before_conditional: false
-  "autocomplete-flow": {}
-  "autocomplete-plus":
-    backspaceTriggersAutocomplete: true
-    confirmCompletion: "tab"
-  conceal:
-    replacements:
-      "::": "asdf"
+    _analyticsUserId: "dd7066f2-7d9f-4e73-a631-2ecafa2ffbe5"
+    language_elm_beautify_on_save: true
+  autosave: {}
   core:
-    apmPath: "/Users/mtilley/github/apm/bin/apm"
+    allowPendingPaneItems: false
     disabledPackages: [
-      "vim-mode-plus-move-to-symbols"
-      "vim-mode-plus-subword-movement"
-      "vim-mode-plus-ex-mode-bottom"
-      "elm-format"
       "vim-mode"
-      "linter-js-standard"
-      "autocomplete-go"
-      "autocomplete-flow"
+      "vim-mode-plus"
+      "vim-mode-plus-ex-mode"
+      "git-plus"
+      "symbol-gen"
       "minimap"
-    ]
-    themes: [
-      "one-light-ui"
-      "one-light-syntax"
+      "ide-haskell"
     ]
   editor:
+    backUpBeforeSaving: true
+    confirmCheckoutHeadRevision: false
     fontFamily: "Fira Code"
     invisibles: {}
-    scrollPastEnd: true
     showIndentGuide: true
-    softWrapHangingIndent: 2
-  "elm-format":
-    showNotifications: false
+    showInvisibles: true
   "exception-reporting":
-    userId: "0105e07e-ea6b-39bc-7746-73f63884809f"
-  "file-icons":
-    coloured: false
-  "find-and-replace":
-    openProjectFindResultsInRightPane: true
-  git:
-    thething: "yep"
-  "git-diff": {}
-  "gometalinter-linter":
-    args: [
-      "-e /comment on exported /"
+    userId: "ec006c8e-b9f1-e96b-c121-42655a8828b4"
+  "find-and-replace": {}
+  "fuzzy-finder":
+    searchAllPanes: true
+  "git-plus": {}
+  "haskell-ghc-mod":
+    additionalPathDirectories: [
+      "/Users/kuychaco/.cabal/bin/"
+      "/usr/local/bin"
     ]
-  "ide-flow":
-    flowPath: "/usr/local/bin/flow"
-  "language-babel":
-    allowLocalOverride: true
-  "language-elm": {}
-  linter:
-    gutterPosition: "Left"
-  "linter-js-standard":
-    honorStyleSettings: true
-    lintMarkdownFiles: true
+    enableGhcModi: false
+  "ide-haskell-hasktags":
+    hasktagsPath: "/Users/kuychaco/.local/bin/hasktags"
   "markdown-preview":
+    breakOnSingleNewline: true
     useGitHubStyle: true
   minimap: {}
-  tabs:
-    enableVcsColoring: true
+  tabs: {}
   "tree-view":
-    focusOnReveal: false
-    squashDirectoryNames: true
-  "vim-mode-plus":
-    ignoreCaseForSearch: true
-    setCursorToStartOfChangeOnUndoRedo: true
-    showHoverSearchCounter: true
-    stayOnTransformString: true
-    stayOnYank: true
-    useSmartcaseForSearch: true
-  "vim-modeline": {}
+    hideVcsIgnoredFiles: true
+  "vim-mode": {}
+  "vim-mode-plus": {}
   welcome:
     showOnStartup: false
   whitespace: {}
-".babel.regexp.source":
-  editor:
-    softWrapHangingIndent: 2
-".c2hs.source":
-  editor:
-    softWrapHangingIndent: 2
-".cabal.source":
-  editor:
-    softWrapHangingIndent: 2
-".coffee.source":
-  editor:
-    softWrapHangingIndent: 2
-".gfm.source":
-  editor:
-    softWrapHangingIndent: 2
-".go.source":
-  editor:
-    softWrapHangingIndent: 2
-".gohtml.html.text":
-  editor:
-    softWrapHangingIndent: 2
-".gotemplate.source":
-  editor:
-    softWrapHangingIndent: 2
-".haskell.hint":
-  editor:
-    softWrapHangingIndent: 2
-".haskell.hint.message":
-  editor:
-    softWrapHangingIndent: 2
-".haskell.hint.type":
-  editor:
-    softWrapHangingIndent: 2
-".haskell.latex.tex.text":
-  editor:
-    softWrapHangingIndent: 2
-".haskell.source":
-  editor:
-    softWrapHangingIndent: 2
-".hsc2hs.source":
-  editor:
-    softWrapHangingIndent: 2
-".js.jsx.source":
-  editor:
-    softWrapHangingIndent: 2
-".litcoffee.source":
-  editor:
-    softWrapHangingIndent: 2

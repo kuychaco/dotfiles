@@ -52,6 +52,6 @@ def create_file(source, target)
     end
   else
     puts "Creating #{target}"
-    system %Q{cp -r "$PWD/#{source}" "#{target}"}
+    system %Q{ln -fs "$PWD/#{source}" "#{target}"}
   end
 end

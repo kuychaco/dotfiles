@@ -1,32 +1,31 @@
-# auto-indent when changing line or inserting at end of line
-handleAutoIndentAfterChangeLine = (evt) ->
-  validCommands = [
-    'vim-mode-plus:change',
-    'vim-mode-plus:insert-after-end-of-line'
-  ]
-  return unless evt.type in validCommands
-  editor = atom.workspace.getActivePaneItem()
-  element = editor.getElement()
-  return unless 'insert-mode' in element.classList
-  for cursor in editor.getCursors()
-    return unless cursor.getBufferColumn() is 0
-  editor.autoIndentSelectedRows()
+profiling = false
 
-handleTrimWhitespaceAfterEscape = (evt) ->
-  validCommands = [
-    'vim-mode-plus:reset-normal-mode'
-    'vim-mode-plus:activate-normal-mode'
-  ]
-  return unless evt.type in validCommands
-  editor = atom.workspace.getActivePaneItem()
-  for cursor in editor.getCursors()
-    row = cursor.getBufferRow()
-    text = editor.buffer.getLines()[row]
-    if text.match /^\s+$/
-      editor.deleteToBeginningOfLine()
+atom.commands.add 'atom-workspace', {
+  'user:toggle-profile': ->
+    console.log 'toggle profile'
+    if profiling
+      console.profileEnd()
+      profiling = false
+    else
+      profiling = true
+      console.profile()
+}
 
-atom.commands.onDidDispatch (evt) ->
-  handleAutoIndentAfterChangeLine(evt)
+atom.keymaps.add 'user',
+  'atom-workspace': 'ctrl-alt-cmd-r': 'user:toggle-profile'
 
-atom.commands.onWillDispatch (evt) ->
-  handleTrimWhitespaceAfterEscape(evt)
+atom.commands.add 'atom-workspace', {
+  'user:profile-save-state': ->
+    console.log 'profile save-state'
+    console.profile()
+    atom.saveState()
+    console.profileEnd()
+}
+
+atom.keymaps.add 'user',
+  'atom-workspace': 'ctrl-alt-cmd-s': 'user:profile-save-state'
+
+
+# atom.workspace.emitter.on 'did-open', ->
+#   if atom.workspace.getActivePane().getPendingItem()
+#     atom.commands.dispatch(document.activeElement, 'tree-view:toggle-focus')
